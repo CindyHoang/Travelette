@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Travelette</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="favicon.ico" type="image/ico">
+	<link href="css/semantic.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/animations.css">
+</head>
+<body onload="init()">
+<a href="" style="color: white; text-decoration: none;"><p style="margin: 0em; left:10px; top:10px; position: fixed;">Travelette<i class="plane white icon"></i></p></a>
+	<div id="booty">
+		<div id="landing">
+			<h1 id="header" class="bigEntrance">"Let's go on an adventure"</h1>
+			<input id="bt" type="submit" class="btn fadeIn" value="Set a budget for my trip">
+			<p>— or —</p>
+			<input id="bt2" type="submit" class="btn fadeIn" value="Plan me a random trip">
+		</div>
+		<div id="budget">
+			<h1>My budget is</h1>
+			$<input id='funds' type="number" class="underline" size="10" placeholder="25" style="height:30px;font-size:30px;">for<input id='people' type="number" class="underline" size="3" placeholder="1" style="height:30px;font-size:30px;">person(s)
+			<br><br><br>
+			<input id="search" type="submit" class="btn" value="Find a trip">
+			<a href="javascript:generate();" style="color: white; text-decoration: none;"><p>Nevermind, just generate anything</p></a>
+		</div>
+		<div id="generate">
+			<h1>Here's what we found: </h1>
+			<!--<a href="javascript:addCard();" style="color: white; text-decoration: none;"><p>Add card</p></a>-->
+			<div id="cardholder" class="ui two cards">
+				<div id="card1" class="card">
+					<div class="image">
+						<img>
+					</div>
+					<div id="cont1" class="content">
+						<div class="header">Yosemite National Park</div>
+						<div id="meta1" class="meta">
+							<i id="money1" class="money icon"></i> $500
+						</div>
+						<div id="desc1" class="description">
+							<i class="plane icon"></i>
+							None<br>
+							<i class="hotel icon"></i>
+							Yosemite National Park, CA<br>
+							<i class="car icon"></i>
+							Enterprise<br>
+							<i class="food icon"></i>
+							Market<br>
+						</div>
+					</div>
+					<div id="extraCont1" class="extra content">
+						<span class="right floated">
+							<div class="ui vertical animated red button" tabindex="0">
+								<div class="hidden content">
+									<i class="heart icon"></i>
+								</div>
+								<div class="visible content">
+									<i class="heart outline icon"></i>
+								</div>
+							</div>
+							<div class="ui vertical animated button" tabindex="0">
+								<div class="hidden content">
+									<i class="trash icon"></i>
+								</div>
+								<div class="visible content">
+									<i class="trash outline icon"></i>
+								</div>
+							</div>
+						</span>
+					</div>
+				</div>
+				<div class="card">
+					<div class="image">
+						<img>
+					</div>
+					<div class="content">
+						<div class="header">Las Vegas, NV</div>
+						<div class="meta">
+							<i class="money icon"></i> $500
+						</div>
+						<div class="description">
+							<i class="plane icon"></i>
+							Delta Airlines<br>
+							<i class="hotel icon"></i>
+							Plaza Hotel & Casino<br>
+							<i class="car icon"></i>
+							Fox Rent A Car<br>
+							<i class="food icon"></i>
+							Nobu Restaurant<br>
+						</div>
+					</div>
+					<div class="extra content">
+						<span class="right floated">
+							<div class="ui vertical animated red button" tabindex="0">
+								<div class="hidden content">
+									<i class="heart icon"></i>
+								</div>
+								<div class="visible content">
+									<i class="heart outline icon"></i>
+								</div>
+							</div>
+							<div class="ui vertical animated button" tabindex="0">
+								<div class="hidden content">
+									<i class="trash icon"></i>
+								</div>
+								<div class="visible content">
+									<i class="trash outline icon"></i>
+								</div>
+							</div>
+						</span>
+					</div>
+				</div>
+				<div class="card">
+					<div class="image">
+						<img>
+					</div>
+					<div class="content">
+						<div class="header">Niagara Falls</div>
+						<div class="meta">
+							<i class="money icon"></i> $500
+						</div>
+						<div class="description">
+							<i class="plane icon"></i>
+							American Airlines<br>
+							<i class="hotel icon"></i>
+							Azure Hotel & Suites<br>
+							<i class="car icon"></i>
+							Hertz<br>
+							<i class="food icon"></i>
+							Paris Crepes Cafe<br>
+						</div>
+					</div>
+					<div class="extra content">
+						<span class="right floated">
+							<div class="ui vertical animated red button" tabindex="0">
+								<div class="hidden content">
+									<i class="heart icon"></i>
+								</div>
+								<div class="visible content">
+									<i class="heart outline icon"></i>
+								</div>
+							</div>
+							<div class="ui vertical animated button" tabindex="0">
+								<div class="hidden content">
+									<i class="trash icon"></i>
+								</div>
+								<div class="visible content">
+									<i class="trash outline icon"></i>
+								</div>
+							</div>
+						</span>
+					</div>
+				</div>
+				<div class="card">
+					<div class="image">
+						<img>
+					</div>
+					<div class="content">
+						<div class="header">Taj Mahal</div>
+						<div class="meta">
+							<i class="money icon"></i> $500
+						</div>
+						<div class="description">
+							<i class="plane icon"></i>
+							Air India<br>
+							<i class="hotel icon"></i>
+							Angra, India<br>
+							<i class="car icon"></i>
+							Car<br>
+							<i class="food icon"></i>
+							Food<br>
+						</div>
+					</div>
+					<div class="extra content">
+						<span class="right floated">
+							<div class="ui vertical animated red button" tabindex="0">
+								<div class="hidden content">
+									<i class="heart icon"></i>
+								</div>
+								<div class="visible content">
+									<i class="heart outline icon"></i>
+								</div>
+							</div>
+							<div class="ui vertical animated button" tabindex="0">
+								<div class="hidden content">
+									<i class="trash icon"></i>
+								</div>
+								<div class="visible content">
+									<i class="trash outline icon"></i>
+								</div>
+							</div>
+						</span>
+					</div>
+				</div>
+<!--
+				<div class="card">
+					<div class="image">
+						<img>
+					</div>
+					<div class="content">
+						<div class="header">Tokyo, Japan</div>
+						<div class="meta">
+							<i class="money icon"></i> $500
+						</div>
+						<div class="description">
+							<i class="plane icon"></i>
+							Flight<br>
+							<i class="hotel icon"></i>
+							Hotel<br>
+							<i class="car icon"></i>
+							Car<br>
+							<i class="food icon"></i>
+							Food<br>
+						</div>
+					</div>
+					<div class="extra content">
+						<span class="right floated">
+							<div class="ui vertical animated red button" tabindex="0">
+								<div class="hidden content">
+									<i class="heart icon"></i>
+								</div>
+								<div class="visible content">
+									<i class="heart outline icon"></i>
+								</div>
+							</div>
+							<div class="ui vertical animated button" tabindex="0">
+								<div class="hidden content">
+									<i class="trash icon"></i>
+								</div>
+								<div class="visible content">
+									<i class="trash outline icon"></i>
+								</div>
+							</div>
+						</span>
+					</div>
+				</div>
+				<div class="card">
+					<div class="image">
+						<img>
+					</div>
+					<div class="content">
+						<div class="header">Tokyo, Japan</div>
+						<div class="meta">
+							<i class="money icon"></i> $500
+						</div>
+						<div class="description">
+							<i class="plane icon"></i>
+							Flight<br>
+							<i class="hotel icon"></i>
+							Hotel<br>
+							<i class="car icon"></i>
+							Car<br>
+							<i class="food icon"></i>
+							Food<br>
+						</div>
+					</div>
+					<div class="extra content">
+						<span class="right floated">
+							<div class="ui vertical animated red button" tabindex="0">
+								<div class="hidden content">
+									<i class="heart icon"></i>
+								</div>
+								<div class="visible content">
+									<i class="heart outline icon"></i>
+								</div>
+							</div>
+							<div class="ui vertical animated button" tabindex="0">
+								<div class="hidden content">
+									<i class="trash icon"></i>
+								</div>
+								<div class="visible content">
+									<i class="trash outline icon"></i>
+								</div>
+							</div>
+						</span>
+					</div>
+				</div>-->
+			</div>
+		</div>
+		<div id="generate_single">
+			<h1>Your next trip is:</h1>
+				<div id = "1" class="ui centered card">
+					<div class="image">
+						<img>
+					</div>
+					<div class="content">
+						<div class="header">Colosseum</div>
+						<div class="meta">
+							<i class="money icon"></i> $500
+						</div>
+						<div class="description">
+							<i class="plane icon"></i>
+							Aer Lingus<br>
+							<i class="hotel icon"></i>
+							Rome, Italy<br>
+							<i class="car icon"></i>
+							Car<br>
+							<i class="food icon"></i>
+							Food<br>
+						</div>
+					</div>
+					<div class="extra content">
+						<span class="right floated">
+							<div class="ui vertical animated red button" tabindex="0">
+								<div class="hidden content">
+									<i class="heart icon"></i>
+								</div>
+								<div class="visible content">
+									<i class="heart outline icon"></i>
+								</div>
+							</div>
+							<div class="ui vertical animated button" tabindex="0">
+								<div class="hidden content">
+									<i class="trash icon"></i>
+								</div>
+								<div class="visible content">
+									<i class="trash outline icon"></i>
+								</div>
+							</div>
+						</span>
+				</div>
+				</div>
+				<!--
+				<div id = "2" class="ui centered card">
+					<div class="image">
+						<img>
+					</div>
+					<div class="content">
+						<div class="header">Tokyo, Japan</div>
+						<div class="meta">
+							<i class="money icon"></i> $500
+						</div>
+						<div class="description">
+							<i class="plane icon"></i>
+							Flight<br>
+							<i class="hotel icon"></i>
+							Hotel<br>
+							<i class="car icon"></i>
+							Car<br>
+							<i class="food icon"></i>
+							Food<br>
+						</div>
+					</div>
+					<div class="extra content">
+						<span class="right floated">
+							<div class="ui vertical animated red button" tabindex="0">
+								<div class="hidden content">
+									<i class="heart icon"></i>
+								</div>
+								<div class="visible content">
+									<i class="heart outline icon"></i>
+								</div>
+							</div>
+							<div class="ui vertical animated button" tabindex="0">
+								<div class="hidden content">
+									<i class="trash icon"></i>
+								</div>
+								<div class="visible content">
+									<i class="trash outline icon"></i>
+								</div>
+							</div>
+						</span>
+				
+				</div>
+			</div>-->
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="js/semantic.js"></script>
+	<script>
+		jQuery.fn.center = function () {
+		    this.css("position","absolute");
+		    this.css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) + 
+		                                                $(window).scrollTop()) + "px");
+		    this.css("left", Math.max(0, (($(window).width() - $(this).outerWidth()) / 2) + 
+		                                                $(window).scrollLeft()) + "px");
+		    return this;
+		}
+		$(window).resize(function() {
+			var width = $(window).width();
+	    	var height = $(window).height();
+	    	if (!$('#landing').is(':hidden')) {
+  				$('#landing').center();
+			}
+	    	if (!$('#budget').is(':hidden')) {
+	    		$('#budget').center();
+	    	}
+	    	if (!$('#generate').is(':hidden')) {
+	    		$('#generate').center();
+			}
+			if (!$('#generate_single').is(':hidden')) {
+	    		$('#generate_single').center();
+			}
+		});
+		function init() {
+			$('#landing').center();
+			// switcharoo();
+		}
+		function generate() {
+			$('#budget').fadeOut(300);
+			$('#generate_single').addClass("slideLeft");
+			$('#generate_single').center();
+			// switcharoo();
+		}
+		function addCard() {
+			var card = document.createElement('div');
+			card.className = "card";
+
+			var content = document.createElement('div');
+			content.className = "content";
+
+			var header = document.createElement('div');
+			header.className = "header";
+
+			var meta = document.createElement('div');
+			meta.className = "meta";
+
+			var money = document.createElement('i');
+			money.className = "money icon";
+
+			var description = document.createElement('div');
+			description.className = "description";
+
+			var plane = document.createElement('i');
+			plane.className = "plane icon";
+
+			var hotel = document.createElement('i');
+			hotel.className = "hotel icon";
+
+			var car = document.createElement('i');
+			car.className = "car icon";
+
+			var food = document.createElement('i');
+			food.className = "food icon";
+
+			var extraContent = document.createElement('div');
+			extraContent.className = "extra content";
+
+			var rightFloated = document.createElement('span');
+			rightFloated.className = "right floated";
+
+			var vertRedButton = document.createElement('div');
+			vertRedButton.className = "ui vertical animated red button";
+
+			var hiddenContRed = document.createElement('div');
+			hiddenContRed.className = "hidden content";
+
+			var visibleContRed = document.createElement('div');
+			visibleContRed.className = "visible content";
+
+			var heart = document.createElement('i');
+			heart.className = "heart icon";
+
+			var heartOutline = document.createElement('i');
+			heartOutline.className = "heart outline icon";
+
+			var vertButton = document.createElement('div');
+			vertButton.className = "ui vertical animated button";
+
+			var hiddenCont = document.createElement('div');
+			hiddenCont.className = "hidden content";
+
+			var visibleCont = document.createElement('div');
+			visibleCont.className = "visible content";
+
+			var trash = document.createElement('i');
+			trash.className = "trash icon";
+
+			var trashOutline = document.createElement('i');
+			trashOutline.className = "trash outline icon";
+
+			var newLine = document.createElement('br');
+
+			hiddenContRed.append(heart);
+			visibleContRed.append(heartOutline);
+			vertRedButton.append(hiddenContRed);
+			vertRedButton.append(visibleContRed);
+			hiddenCont.append(trash);
+			visibleCont.append(trashOutline)
+			vertButton.append(hiddenCont);
+			vertButton.append(visibleCont);
+			rightFloated.append(vertRedButton);
+			rightFloated.append(vertButton);
+			extraContent.append(rightFloated);
+
+			description.append(plane);
+			description.append("Flight");
+			description.append(hotel);
+			description.append("Hotel");
+			description.append(car);
+			description.append("Car");
+			description.append(food);
+			description.append("Food");
+			meta.append(money);
+			header.append("Tokyo, Japan");
+
+			content.append(header);
+			content.append(meta);
+			content.append(description);
+
+			card.append(content);
+			card.append(extraContent);
+			$('#cardholder').append(card);
+			$('#generate').center();
+		}
+
+		// function switcharoo() {
+		// 	var counter = 1;
+		// 	var displayOne = document.getElementById("1");
+		// 	var displayTwo = document.getElementById("2");
+
+		// 	if (counter % 2 == 0) {
+		// 		counter++;
+		// 		$('#1').hide();
+		// 		$('#2').show();
+		// 	} else{
+		// 		counter++
+		// 		$('#2').hide();
+		// 		$('#1').show();
+		// 	}
+
+		// }
+
+		$('#bt').click(function() {
+			$(this).addClass("floating");
+			setTimeout(function(){
+				$('#header').fadeOut(200);
+	    		$('#landing').fadeOut(300);
+	    		$('#budget').addClass("slideLeft");
+	    		$('#budget').center();
+			},500);
+		});
+
+		$('#bt2').click(function() {
+			$(this).addClass("floating");
+			setTimeout(function(){
+				$('#header').fadeOut(200);
+	    		$('#landing').fadeOut(300);
+	    		$('#generate_single').addClass("slideLeft");
+	    		$('#generate_single').center();
+	    		// switcharoo();
+			},500);
+		});
+
+		$('#search').click(function() {
+			$(this).addClass("floating");
+			var bud = jQuery.trim($("#funds").val());
+			var ppl = jQuery.trim($("#people").val());
+			if ((bud.length == 0) || (ppl.length == 0)) {
+				alert("Please check that you have inputted correct values");
+			}
+			else {
+				var budget = document.getElementById('funds').value;
+				var persons = document.getElementById('people').value;
+				$('#budget').fadeOut(300);
+				$('#generate').addClass("slideLeft");
+				$('#generate').center();
+			}
+		});
+	</script>
+</body>
+</html>

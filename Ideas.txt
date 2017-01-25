@@ -1,0 +1,25 @@
+1. Prompt for a budget, number of people included, how many nights gone
+    - “600” “2 people” “
+2. Data will go through our super secret and very “efficient” algorithm to find the following:
+    - Destination
+        - Disneyland vacation for 1 day 1 night
+    - Transportation
+        - Current location: Merced California
+        - Destination DisneyLand in LA
+        - Flight: 100 per person = 200
+    - Hotel Stay
+        - Nearest cheapest hotel: 40$ a night for a single room
+    - Fun things to do 
+        - Disneyland and downtown disney!!
+            - Total is 80$ a day hopper x2 = 160$
+        - Food: The rainforest cafe: 50$ for 2
+        - Spending cash: 150
+    - Recommendations  
+        - “Spend 100$ more and you can do….”
+        
+UI Components
+  Front page:
+    Max budget textbox
+    Num people drop menu
+  Results page:
+    Love/Trash options

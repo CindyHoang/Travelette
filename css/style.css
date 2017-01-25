@@ -1,0 +1,116 @@
+body {
+	font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    color: white;
+	background-color: #99D3DF;
+	font-size: 18px;
+	overflow: hidden;
+}
+
+#booty {
+}
+
+.underline {
+	border: 0px solid rgba(255, 255, 255, .5);
+    border-bottom-width: 1px;
+    background-color: transparent;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#landing {
+}
+#budget {
+	visibility: hidden;
+}
+#generate {
+	visibility: hidden;
+}
+#generate_single {
+	visibility: hidden;
+}
+#beep {
+	background-color: white;
+	margin-top: 200px;
+	height: 400px;
+	visibility: hidden;
+}
+header {
+	font-size: 20px;
+	font-family: 'Lato', sans-serif;
+}
+h1 {
+    font-size: 50px;
+    text-align: center;
+}
+p {
+	font-size: 15px;
+	text-align: center;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+input[type="text"]:focus {
+	border-color: white;
+	outline: 0;
+}
+
+input[type="number"] {
+	width: 125px;
+}
+
+input[type="number"]:focus {
+	border-color: white;
+	outline: 0;
+}
+
+::-webkit-input-placeholder {
+	color: white;
+	opacity: .60;
+	font-style: italic;
+	padding: 5px 5px 5px 5px;
+}
+:-moz-placeholder {
+	color: white;
+	opacity: .60;
+	font-style: italic;
+	padding: 5px 5px 5px 5px;
+}
+::-moz-placeholder {
+	color: white;
+	opacity: .60;
+	font-style: italic;
+	padding: 5px 5px 5px 5px;
+}
+:-ms-input-placeholder {
+	color: white;
+	opacity: .60;
+	font-style: italic;
+	padding: 5px 5px 5px 5px;
+}
+.btn {
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 20px;
+  background: #99D3DF;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 15px 20px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  border: solid #ffffff 2px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+.btn {
+	border-color: white;
+	outline: 0;
+}
+.btn:hover {
+  text-decoration: none;
+}
